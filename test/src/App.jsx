@@ -1,13 +1,12 @@
-import { useState } from 'react'
-import projectDashboard from './components/projectDashboard'
-import header from './components/header'
+import { useState } from 'react';
+import Header from './components/header';
 
 function App() {
 
 
   return (
     <>
-    <header />
+    <Header />
     </>
   )
 }

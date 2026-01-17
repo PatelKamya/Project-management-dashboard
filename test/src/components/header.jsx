@@ -1,15 +1,18 @@
 import React from 'react'
 import { TiSpiral } from "react-icons/ti";
 import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
 
-const header = () => {
+const Header = () => {
   return (
     <div>
-        <div className='logo'>
-            <div><TiSpiral /></div>
-        </div>
+        <Navbar className=''>
+            <Container>
+                <Navbar.Brand>Donezo</Navbar.Brand>
+            </Container>
+        </Navbar>
     </div>
   )
 }
 
-export default header
+export default Header
