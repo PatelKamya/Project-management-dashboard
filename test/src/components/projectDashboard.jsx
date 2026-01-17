@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card';
 const projectDashboard = () => {
   return (
     <Card>
-        kamya
+        kamyaaaaaaaaa
     </Card>
   )
 }
