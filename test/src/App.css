@@ -4,4 +4,9 @@ body {
 
 .main-container {
  display: flex;
+ position: relative;
+ margin-left: 20px;
+ width: 100%;
+
+
 }
