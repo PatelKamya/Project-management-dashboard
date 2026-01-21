@@ -9,15 +9,18 @@ import { RiAccountCircleLine } from "react-icons/ri";
 
 
 
-const Header = () => {
+const Header = ({ toggleSidebar }) => {
     return (
         <div className=''>
             <div className='nav-bar'>
+
                 <div className='rounded-3 m-2' style={{ backgroundColor: 'gray' }}>
+                    
                     <Navbar className='d-flex justify-content-between me-2'>
                         <div className='d-flex gap-2 m-1'>
                             <div><TiSpiral className='ms-3' size={40} /></div>
                             <Navbar.Brand className=''>Donezo</Navbar.Brand>
+                            
                         </div>
                         <div className='d-flex '>
                             <div className='d-flex gap-5'>
@@ -40,7 +43,7 @@ const Header = () => {
                 </div>
             </div>
 
-   
+
         </div>
     )
 }

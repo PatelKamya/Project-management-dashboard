@@ -4,7 +4,7 @@ const Layout = ({ children }) => {
     const [isSliderOpen, setIsSliderOpen] = useState(true);
     return (
         <div className=''>
-            <Header toggleSidebar={() => setIsSliderOpen(!isSliderOpen)} />
+            <Header />
             <div className='main-container'>
                 <Slider isOpen={isSliderOpen} />
                 <main className='content'>
