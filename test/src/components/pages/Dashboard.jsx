@@ -7,7 +7,7 @@ const Dashboard = () => {
   return (
     <div className='main-container'>
         <Row>
-            <Col className='m-4' style={{backgroundColor: 'yellowgreen'}} >
+            <Col className='' style={{backgroundColor: 'yellowgreen'}} >
                 kamya
             </Col>
         </Row>
