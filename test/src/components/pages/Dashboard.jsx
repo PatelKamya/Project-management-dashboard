@@ -121,7 +121,7 @@ const Dashboard = () => {
                             <Container>
                                 <h4 style={{color:'darkgreen'}}>Meeting with Arc Company</h4>
                                 <h6 style={{color: 'gray'}}>Time : 1:00 - 3:00</h6>
-                                <Button className='rounded-5 w-100 mt-3' style={{backgroundColor: 'darkgreen'}}>Start Meeting</Button>
+                                <Button className='rounded-5 w-100 mt-3 fw-bold' style={{backgroundColor: 'darkgreen', color:'white'}}>Start Meeting</Button>
                             </Container>
                         </CardBody>
                     </Card>
