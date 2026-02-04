@@ -10,12 +10,11 @@ body {
 }
 
 .btn {
-    /* border-radius: px; */
     display: flex;
     color: black;
     border: 1px solid black !important;
     background-color: transparent;
     justify-content: center;
     transition: all .3s;
-    /* box-shadow: 5px 5px 10px 2px rgba(184, 126, 231, 0.247); */
+    box-shadow: 5px 5px 10px 2px rgba(184, 126, 231, 0.247);
 }

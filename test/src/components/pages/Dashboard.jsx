@@ -30,11 +30,11 @@ const Dashboard = () => {
                 <div className='mt-3'>
                     <div className='d-flex gap-3' style={{ padding: '1px 20px' }}>
                         
-                        <Button className='rounded-5 mb-1' onClick={() => setShow(true)}>
-                            <HiOutlinePlusSm size={20} className='me-2' style={{ marginTop: '3px' }} /> Add Project
+                        <Button className='rounded-5 mb-1' onClick={() => setShow(true)} style={{backgroundColor:'darkgreen'}}>
+                            <HiOutlinePlusSm size={20} className='me-2' style={{ marginTop: '3px' }} />Add Project
                         </Button>
                         <AddProjects show={show} handleClose={() => setShow(false)} />
-                        <Button className='rounded-5 mb-1'>Import Data</Button>
+                        <Button className='rounded-5 mb-1 btn'>Import Data</Button>
                     </div>
                 </div>
             </div>
@@ -113,10 +113,26 @@ const Dashboard = () => {
                     <Card>projects</Card>
                 </Col>
                 <Col lg={3} md={6}>
-                    <Card>projects</Card>
+                    <Card className='rounded-4'>
+                        <div className='m-2'>
+                            <h6 className='mb-0 text-black fw-bold mt-1 fs-5'>Remainders</h6>
+                        </div>
+                        <CardBody>
+                            <Container>
+                                <h4 style={{color:'darkgreen'}}>Meeting with Arc Company</h4>
+                                <h6 style={{color: 'gray'}}>Time : 1:00 - 3:00</h6>
+                                <Button className='rounded-5 w-100 mt-3' style={{backgroundColor: 'darkgreen'}}>Start Meeting</Button>
+                            </Container>
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col lg={3} md={6}>
-                    <Card>projects</Card>
+                    <Card className='rounded-4'>
+                        <div className='d-flex justify-content-between'>
+                            <h6 className='mb-0 text-black fw-bold mt-1 fs-5 m-2'>Project</h6>
+                            <Button className='rounded-5' style={{}}>New</Button>
+                        </div>
+                    </Card>
                 </Col>
 
             </Row>
