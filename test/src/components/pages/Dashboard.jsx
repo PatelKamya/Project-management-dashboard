@@ -8,11 +8,18 @@ import CardBody from 'react-bootstrap/esm/CardBody';
 import Button from 'react-bootstrap/Button';
 import { MdArrowDropUp } from "react-icons/md";
 import { HiOutlinePlusSm } from "react-icons/hi";
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
+import { Link } from 'react-router-dom';
+import AddProjects from '../../models/AddProjects';
+import { useState } from 'react';
+import Container from 'react-bootstrap/esm/Container';
 
 
 
 
 const Dashboard = () => {
+    const [show, setShow] = useState(false);
     return (
         <div className='w-100' style={{ background: '' }}>
             <div className='d-flex justify-content-between'>
@@ -22,7 +29,11 @@ const Dashboard = () => {
                 </div>
                 <div className='mt-3'>
                     <div className='d-flex gap-3' style={{ padding: '1px 20px' }}>
-                        <Button className='rounded-5 mb-1'><HiOutlinePlusSm size={20} className='me-2' style={{ marginTop: '3px' }} /> Add Project</Button>
+                        
+                        <Button className='rounded-5 mb-1' onClick={() => setShow(true)}>
+                            <HiOutlinePlusSm size={20} className='me-2' style={{ marginTop: '3px' }} /> Add Project
+                        </Button>
+                        <AddProjects show={show} handleClose={() => setShow(false)} />
                         <Button className='rounded-5 mb-1'>Import Data</Button>
                     </div>
                 </div>
@@ -33,7 +44,9 @@ const Dashboard = () => {
                         <div className='m-2'>
                             <div className='d-flex justify-content-between'>
                                 <h6 className='mb-0 text-black fw-bold mt-1 fs-5'>Total Projects</h6>
-                                <div className='me-2 '><MdArrowOutward className='border border-black rounded-circle p-1 fw-bolder' style={{ backgroundColor: '', color: 'black', borderWidth: "" }} size={25} /></div>
+                                <OverlayTrigger placement='bottom' overlay={<Tooltip id='tooltip-delete'>view details</Tooltip>}>
+                                    <Link to='/projects'><MdArrowOutward className='border border-black rounded-circle p-1 fw-bolder' style={{ backgroundColor: '', color: 'black', borderWidth: "" }} size={25} /></Link>
+                                </OverlayTrigger>
                             </div>
                         </div>
                         <CardBody>
