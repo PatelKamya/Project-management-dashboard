@@ -2,7 +2,6 @@ import React from 'react'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import CardHeader from 'react-bootstrap/esm/CardHeader';
 import { MdArrowOutward } from "react-icons/md";
 import CardBody from 'react-bootstrap/esm/CardBody';
 import Button from 'react-bootstrap/Button';
