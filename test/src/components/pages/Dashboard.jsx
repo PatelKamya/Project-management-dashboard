@@ -12,13 +12,20 @@ import Tooltip from 'react-bootstrap/Tooltip';
 import { Link } from 'react-router-dom';
 import AddProjects from '../../models/AddProjects';
 import { useState } from 'react';
-import Container from 'react-bootstrap/esm/Container';
+import Container from 'react-bootstrap/esm/Container'
+import { Navigate } from 'react-router-dom';
 
 
 
 
 const Dashboard = () => {
     const [show, setShow] = useState(false);
+
+    const navigate = Navigate();
+    const logout = () => {
+        localStorage.removeItem('isLoggedIn');
+        navigate('/');
+    }
     return (
         <div className='w-100' style={{ background: '' }}>
             <div className='d-flex justify-content-between'>
@@ -51,7 +58,7 @@ const Dashboard = () => {
                         <CardBody>
                             <h1 className='mb-3'>24</h1>
                             <div className='d-flex gap-2'>
-                                <Button className='' style={{ padding: '0px 3px' }}>3 <MdArrowDropUp className='mt-1' /></Button>
+                                <Button className='' style={{ padding: '0px 3px' }}>3 <MdArrowDropUp className='mb-1' /></Button>
                                 <span>Increased from last month</span>
                             </div>
                         </CardBody>
@@ -69,7 +76,7 @@ const Dashboard = () => {
                         <CardBody>
                             <h1 className='mb-3'>24</h1>
                             <div className='d-flex gap-2'>
-                                <Button className='' style={{ padding: '0px 3px' }}>3 <MdArrowDropUp className='mt-1' /></Button>
+                                <Button className='' style={{ padding: '0px 3px' }}>3 <MdArrowDropUp className='mb-1' /></Button>
                                 <span>Increased from last month</span>
                             </div>
                         </CardBody>
@@ -86,7 +93,7 @@ const Dashboard = () => {
                         <CardBody>
                             <h1 className='mb-3'>24</h1>
                             <div className='d-flex gap-2'>
-                                <Button className='' style={{ padding: '0px 3px' }}>3 <MdArrowDropUp className='mt-1' /></Button>
+                                <Button className='' style={{ padding: '0px 3px' }}>3 <MdArrowDropUp className='mb-1' /></Button>
                                 <span>Increased from last month</span>
                             </div>
                         </CardBody>

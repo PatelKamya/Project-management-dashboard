@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
             <Header />
             <div className="d-flex">
                 <Slider />
-                <main className="main-container">
+                <main className='w-100 p-2'>
                     {children}
                 </main>
             </div>
