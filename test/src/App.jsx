@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout';
 import Dashboard from './components/pages/Dashboard';
 import Login from './components/pages/Login';
-// import ProtectedRoutes from './proectedrouets/ProtectedRoutes';
+
 
 function App() {
   return (
@@ -12,13 +12,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Login />} />
-          <Route path='/dashboard' element={
-            <ProtectedRoutes>
-              <Layout>
-                <Dashboard />
-              </Layout>
-            </ProtectedRoutes>
-          } />
+          <Route path="/dashboard" element={<Layout />}>
+            <Route index element={<Dashboard />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>
